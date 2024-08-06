@@ -17,6 +17,8 @@
 
 .slick-dots li.slick-active button::before {
     color: orange;
+    font-size: 20px;
+
 }
 
 .slick-dots li button::before {
