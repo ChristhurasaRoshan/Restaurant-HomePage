@@ -32,15 +32,15 @@ const Testamonials = () => {
           {testamonials.map((item, index) => (
             <div key={index} className="p-4">
               <div className="bg-white px-4 py-5 shadow-lg overflow-hidden rounded-tl-3xl rounded-br-3xl">
-              <div className="flex items-center">
-              <img src={item.image} alt={item.name} className="w-20 h-20 rounded-full mr-4" />
-              <div className="flex text-orange-400">
-                {Array(5).fill().map((_, i) => (
-                  <FaStar key={i} />
-                ))}
-                </div>
+              <div className="flex items-center mb-6">
+                <img src={item.image} alt={item.name} className="w-20 h-20 rounded-full mr-4" />
+                <div className="flex text-orange-400">
+                    {Array(5).fill().map((_, i) => (
+                    <FaStar key={i} />
+                    ))}
+                    </div>
               </div>
-                <p className="text-sm mb-2">{item.comment}</p>
+                <p className="text-sm mb-4">{item.comment}</p>
                 <h3 className="text-md font-bold text-orange-400 mb-2">{item.name}</h3>
               </div>
             </div>
