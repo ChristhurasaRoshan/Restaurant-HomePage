@@ -6,13 +6,12 @@ Tailwand CSS
 <br>
 
 # Installation
-git clone https://github.com/ChristhurasaRoshan/MERN-SAMPLE.git
+git clone https://github.com/ChristhurasaRoshan/Restaurant-HomePage.git
 
 Setting Up Frontend
 ```sh
-cd frontend
 npm install
-npm start
+npm run start
 ```
 
 Now, navigate to localhost:3000 in your browser. 
