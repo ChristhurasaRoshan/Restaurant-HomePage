@@ -1,21 +1,11 @@
 import React from 'react';
-import { popularItems, testamonials } from "../data";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css"; 
-import "slick-carousel/slick/slick-theme.css";
-import { FaStar } from 'react-icons/fa';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMapMarkerAlt, faPhone, faEnvelope, faClock } from '@fortawesome/free-solid-svg-icons';
+import { faMapMarkerAlt, faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import Popular from '../components/Popular';
+import Testamonials from '../components/Testamonials';
 
 export const Homepage = () => {
-  const settings = {
-    infinite: true,
-    speed: 1000,
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 3000,
-  };
+  
 
   return (
     <>
@@ -63,32 +53,8 @@ export const Homepage = () => {
       </div>
 
       {/* popular section */}
-      <div className="px-24 py-10">
-        <div className="flex items-center mb-4">
-            <h2 className="text-3xl font-bold text-orange-400">Popular</h2>
-            <hr className="w-40 border-t-4 mx-4 border-orange-400"/>
-        </div>
-        <p className="text-xl font-bold text-left mb-8 text-black">Our Menu Items</p>
-        <Slider {...settings}>
-          {popularItems.map((item, index) => (
-            <div key={index} className="p-4">
-              <div className="bg-white shadow-lg overflow-hidden">
-                <img src={item.image} alt={item.name} className="w-full h-48 object-cover" />
-                <div className="flex justify-between items-center">
-                <div className="pl-6">
-                  <h3 className="text-md font-bold mb-2">{item.name}</h3>
-                  <p className="text-xl text-gray-700 mb-2">${item.price}</p>
-                </div>
-                <img src="/assets/cart.png" alt="Offer" className="h-20 bg-orange-400 p-4" />
-              </div>
-              </div>
-            </div>
-          ))}
-        </Slider>
-        <div className="flex justify-center mt-10">
-          <button className="bg-orange-400 text-white py-2 px-4 rounded-md font-semibold hover:bg-orange-500 transition duration-300">View all</button>
-        </div>
-      </div>
+      <Popular/>
+      
 
       {/* gallery section */}
       <div className="px-24 py-16 mt-10 bg-orange-400">
@@ -118,32 +84,8 @@ export const Homepage = () => {
       </div>
 
       {/* testamonials section */}
-      <div className="px-24 py-20 bg-slate-100">
-        <div className="flex items-center mb-4">
-            <h2 className="text-3xl font-bold text-orange-400">Testamonials</h2>
-            <hr className="w-40 border-t-4 mx-4 border-orange-400"/>
-        </div>
-        <p className="text-xl font-bold text-left mb-8 text-black">What People Say about Us</p>
-        <Slider {...settings}>
-          {testamonials.map((item, index) => (
-            <div key={index} className="p-4">
-              <div className="bg-white px-4 py-5 shadow-lg overflow-hidden rounded-tl-3xl rounded-br-3xl">
-              <div className="flex items-center">
-              <img src={item.image} alt={item.name} className="w-20 h-20 rounded-full mr-4" />
-              <div className="flex text-orange-400">
-                {Array(5).fill().map((_, i) => (
-                  <FaStar key={i} />
-                ))}
-                </div>
-              </div>
-                <p className="text-sm mb-2">{item.comment}</p>
-                <h3 className="text-md font-bold text-orange-400 mb-2">{item.name}</h3>
-              </div>
-            </div>
-          ))}
-        </Slider>      
-        </div>
-
+      <Testamonials/>
+      
        {/* contact section */}
       <div className="px-24 py-20">
           <div className="flex items-center justify-end mb-8">
