@@ -19,5 +19,8 @@ Additional Installation
 ```sh
 npm install @fortawesome/react-fontawesome @fortawesome/free-solid-svg-icons
 ```
+```sh
+npm install react-slick slick-carousel
+```
 
 <br>
